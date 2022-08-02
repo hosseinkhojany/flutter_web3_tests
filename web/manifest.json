@@ -1,6 +1,6 @@
 {
-    "name": "flutter_web3_games",
-    "short_name": "flutter_web3_games",
+    "name": "web3_cross_wallet_flutter",
+    "short_name": "web3_cross_wallet_flutter",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
