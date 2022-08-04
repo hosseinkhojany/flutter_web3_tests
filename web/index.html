@@ -47,7 +47,7 @@
 <!--      window.flutterWebRenderer = "canvaskit";-->
 <!--    }-->
   </script>
-  <script src="main.dart.js" type="application/javascript"></script>
+  <script src="main.dart.js?version=1" type="application/javascript"></script>
 
   <style>
    .lds-facebook {
@@ -105,7 +105,7 @@
       }
       scriptLoaded = true;
       var scriptTag = document.createElement('script');
-      scriptTag.src = 'main.dart.js';
+      scriptTag.src = 'main.dart.js?version=1';
       scriptTag.type = 'application/javascript';
       document.body.append(scriptTag);
     }
