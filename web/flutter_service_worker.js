@@ -36,14 +36,14 @@ const RESOURCES = {
 "assets/fonts/MaterialIcons-Regular.otf": "95db9098c58fd6db106f1116bae85a0b",
 "assets/NOTICES": "2952ba2e5e89b198b2451376aea16798",
 "manifest.json": "975fc60a98bab6aae7b2fd35acdc37cd",
-"main.dart.js": "79be419dedd359d03fab218674fa7ad9",
-"index.html": "31bc10c3ea4ef8f5b0f89a4e74a580fe",
-"/": "31bc10c3ea4ef8f5b0f89a4e74a580fe",
+"main.dart.js": "23f14c756af464a4355e56f6b85940c1",
+"index.html": "691fcdb4560162cae77004d09240362c",
+"/": "691fcdb4560162cae77004d09240362c",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"favicon.png": "5dcef449791fa27946b3d35ad8803796",
+"favicon.png": "e268003702fa54c58ee8b8f6fcadaaf0",
 "version.json": "3e4cfaa36e7a94a5bb8cdc138d27a645"
 };
 
