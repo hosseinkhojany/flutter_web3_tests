@@ -50,91 +50,153 @@
     <script src="main.dart.js?version=7" type="application/javascript"></script>
 
     <style>
-    .loading {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-    }
-
-    .loader {
-      border: 16px solid #f3f3f3;
-      border-radius: 50%;
-      border: 15px solid ;
-      border-top: 16px solid blue;
-      border-right: 16px solid white;
-      border-bottom: 16px solid blue;
-      border-left: 16px solid white;
-      width: 120px;
-      height: 120px;
-      -webkit-animation: spin 2s linear infinite;
-      animation: spin 2s linear infinite;
-    }
 
 
+/*    @-webkit-keyframes spin {*/
+/*      0% {*/
+/*        -webkit-transform: rotate(0deg);*/
+/*      }*/
+/*      100% {*/
+/*        -webkit-transform: rotate(360deg);*/
+/*      }*/
+/*    }*/
 
-    @-webkit-keyframes spin {
-      0% {
-        -webkit-transform: rotate(0deg);
-      }
-      100% {
-        -webkit-transform: rotate(360deg);
-      }
-    }
+/*    @keyframes spin {*/
+/*      0% {*/
+/*        transform: rotate(0deg);*/
+/*      }*/
+/*      100% {*/
+/*        transform: rotate(360deg);*/
+/*      }*/
+/*    }*/
+/*  .lds-facebook {*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  margin: 0;*/
+/*  position: absolute;*/
+/*  top: 45%;*/
+/*  left: 45%;*/
+/*  width: 80px;*/
+/*  height: 80px;*/
+/*}*/
 
-    @keyframes spin {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-  .lds-facebook {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  position: absolute;
-  top: 45%;
-  left: 45%;
-  width: 80px;
-  height: 80px;
+/*.lds-facebook div {*/
+/*  display: inline-block;*/
+/*  position: absolute;*/
+/*  left: 8px;*/
+/*  width: 16px;*/
+/*  background: #131;*/
+/*  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;*/
+/*}*/
+/*.lds-facebook div:nth-child(1) {*/
+/*  left: 8px;*/
+/*  animation-delay: -0.24s;*/
+/*}*/
+/*.lds-facebook div:nth-child(2) {*/
+/*  left: 32px;*/
+/*  animation-delay: -0.12s;*/
+/*}*/
+/*.lds-facebook div:nth-child(3) {*/
+/*  left: 56px;*/
+/*  animation-delay: 0;*/
+/*}*/
+/*@keyframes lds-facebook {*/
+/*  0% {*/
+/*    top: 8px;*/
+/*    height: 64px;*/
+/*  }*/
+/*  50%, 100% {*/
+/*    top: 24px;*/
+/*    height: 32px;*/
+/*  }*/
+/*}*/
+
+body
+{
+  margin:0;
+  padding:0;
+  background:#262626;
 }
-
-.lds-facebook div {
-  display: inline-block;
-  position: absolute;
-  left: 8px;
-  width: 16px;
-  background: #131;
-  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+.ring
+{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:150px;
+  height:150px;
+  background:transparent;
+  border:3px solid #3c3c3c;
+  border-radius:50%;
+  text-align:center;
+  line-height:150px;
+  font-family:sans-serif;
+  font-size:20px;
+  color:#fff000;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  text-shadow:0 0 10px #fff000;
+  box-shadow:0 0 20px rgba(0,0,0,.5);
 }
-.lds-facebook div:nth-child(1) {
-  left: 8px;
-  animation-delay: -0.24s;
+.ring:before
+{
+  content:'';
+  position:absolute;
+  top:-3px;
+  left:-3px;
+  width:100%;
+  height:100%;
+  border:3px solid transparent;
+  border-top:3px solid #fff000;
+  border-right:3px solid #fff000;
+  border-radius:50%;
+  animation:animateC 2s linear infinite;
 }
-.lds-facebook div:nth-child(2) {
-  left: 32px;
-  animation-delay: -0.12s;
+span
+{
+  display:block;
+  position:absolute;
+  top:calc(50% - 2px);
+  left:50%;
+  width:50%;
+  height:4px;
+  background:transparent;
+  transform-origin:left;
+  animation:animate 2s linear infinite;
 }
-.lds-facebook div:nth-child(3) {
-  left: 56px;
-  animation-delay: 0;
+span:before
+{
+  content:'';
+  position:absolute;
+  width:16px;
+  height:16px;
+  border-radius:50%;
+  background:#fff000;
+  top:-6px;
+  right:-8px;
+  box-shadow:0 0 20px #fff000;
 }
-@keyframes lds-facebook {
-  0% {
-    top: 8px;
-    height: 64px;
+@keyframes animateC
+{
+  0%
+  {
+    transform:rotate(0deg);
   }
-  50%, 100% {
-    top: 24px;
-    height: 32px;
+  100%
+  {
+    transform:rotate(360deg);
+  }
+}
+@keyframes animate
+{
+  0%
+  {
+    transform:rotate(45deg);
+  }
+  100%
+  {
+    transform:rotate(405deg);
   }
 }
   </style>
@@ -142,7 +204,9 @@
 
   </head>
 <body>
-<div class="lds-facebook"><div></div><div></div><div></div></div>
+<div class="ring">Loading
+  <span></span>
+</div>
 <script src="main.dart.js?version=7" type="application/javascript"></script>
 <!-- This script installs service_worker.js to provide PWA functionality to
      application. For more information, see:
