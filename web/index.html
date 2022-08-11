@@ -40,14 +40,14 @@
     <script src="compressor.js" defer></script>
 
     <script type="text/javascript">
-    let useHtml = // ...
+    // let useHtml = // ...
 <!--    if(useHtml) {-->
-      window.flutterWebRenderer = "html";
+      // window.flutterWebRenderer = "html";
 <!--    } else {-->
 <!--      window.flutterWebRenderer = "canvaskit";-->
 <!--    }-->
   </script>
-    <script src="main.dart.js" type="application/javascript"></script>
+    <script src="main.dart.js?version=11" type="application/javascript"></script>
 
     <style>
    body
@@ -137,73 +137,17 @@ span:before
     transform:rotate(405deg);
   }
 }
-
-   /*------------------------------------------------------*/
-
-   .btnaccept{
-     display: inline-block;
-     margin-right: 20px;
-     padding: 3px 8px;
-     background-color: #008CBA;
-     border: 2px solid #ADCCED;
-     border-radius: 5px;
-     color:#fff;
-     font-size: 13px;
-     font-weight: 500;
-   }
-
-   .btnaccept:hover {
-     background-color: #E7F0Fd;
-     color: #1b65a7;
-   }
-
-
-   .btnnot{
-
-     margin-right: 20px;
-     padding: 3px 8px;
-     background-color: #90b4ce;
-     border: 2px solid #ADCCED;
-     border-radius: 5px;
-     color:#fff;
-     font-size: 13px;
-     font-weight: 500;
-   }
-
-   .btnnot:hover {
-     background-color: #E7F0Fd;
-     color: #1b65a7;
-   }
-
-   #term  {
-     float: left;
-     margin-right: 10px;
-     margin-top: 8px;
-   }
-   .LT{
-     float: left;
-   }
-
   </style>
 
 
   </head>
 <body>
 
-<!--<div class="ring">Loading-->
-<!--  <span></span>-->
-<!--</div>-->
+<div class="ring">Loading
+  <span></span>
+</div>
 
-<p style="text-align: left;">Please tick the below to confirm that you agree to comply with the term and conditions of becoming a participating  employer in <strong>herokuapp</strong></p>
-
-<form dir="ltr" action="/action_page.php"><input id="term" type="checkbox" />     <label class="LT" for="term">I agree to be bound by Player Admission Agreement and Player Terms and Conditions .</label>
-
-  <input class="btnnot" type="submit" value="Not yet" />
-
-  <input class="btnaccept" type="submit" value="Accept the terms" />
-
-</form>
-<script src="main.dart.js?version=10" type="application/javascript"></script>
+<script src="main.dart.js?version=11" type="application/javascript"></script>
 <!-- This script installs service_worker.js to provide PWA functionality to
      application. For more information, see:
      https://developers.google.com/web/fundamentals/primers/service-workers -->
@@ -216,7 +160,7 @@ span:before
       }
       scriptLoaded = true;
       var scriptTag = document.createElement('script');
-      scriptTag.src = 'main.dart.js';
+      scriptTag.src = 'main.dart.js?version=11';
       scriptTag.type = 'application/javascript';
       document.body.append(scriptTag);
     }
