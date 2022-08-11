@@ -2,19 +2,6 @@
 <html xmlns="http://www.w3.org/1999/html">
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <head>
-    <!--
-      If you are serving your web app in a path other than the root, change the
-      href value below to reflect the base path you are serving from.
-
-      The path provided below has to start and end with a slash "/" in order for
-      it to work correctly.
-
-      For more details:
-      * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-      This is a placeholder for base href that will be replaced by the value of
-      the `--base-href` argument provided to `flutter build`.
-    -->
 
     <script src="https://cdn.ethers.io/lib/ethers-5.4.umd.min.js" type="application/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/@walletconnect/web3-provider@1.5.0-rc.2/dist/umd/index.min.js" type="application/javascript"></script>
@@ -33,21 +20,18 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png"/>
 
-    <title>Flutter Chat Kit</title>
+    <title>Web3 Game</title>
     <link rel="manifest" href="manifest.json">
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/browser-image-compression@2.0.0/dist/browser-image-compression.js"></script>
-    <script src="compressor.js" defer></script>
 
     <script type="text/javascript">
-    // let useHtml = // ...
+<!--    let useHtml = // ...-->
 <!--    if(useHtml) {-->
-      // window.flutterWebRenderer = "html";
+<!--      window.flutterWebRenderer = "html";-->
 <!--    } else {-->
 <!--      window.flutterWebRenderer = "canvaskit";-->
 <!--    }-->
   </script>
-    <script src="main.dart.js?version=11" type="application/javascript"></script>
 
     <style>
    body
@@ -137,83 +121,153 @@ span:before
     transform:rotate(405deg);
   }
 }
+
+
+
+
+
+
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #24C6DC;
+  background: -webkit-linear-gradient(to bottom, #514A9D, #24C6DC);
+  background: linear-gradient(to bottom, #514A9D, #24C6DC);
+}
+
+.box div {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: 6px solid rgba(255,255,255,0.8);
+}
+
+.box div:nth-child(1) {
+  top: 12%;
+  left: 42%;
+  animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(2) {
+  top: 70%;
+  left: 50%;
+  animation: animate 7s linear infinite;
+}
+.box div:nth-child(3) {
+  top: 17%;
+  left: 6%;
+  animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(4) {
+  top: 20%;
+  left: 60%;
+  animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(5) {
+  top: 67%;
+  left: 10%;
+  animation: animate 6s linear infinite;
+}
+
+.box div:nth-child(6) {
+  top: 80%;
+  left: 70%;
+  animation: animate 12s linear infinite;
+}
+
+.box div:nth-child(7) {
+  top: 60%;
+  left: 80%;
+  animation: animate 15s linear infinite;
+}
+
+.box div:nth-child(8) {
+  top: 32%;
+  left: 25%;
+  animation: animate 16s linear infinite;
+}
+
+.box div:nth-child(9) {
+  top: 90%;
+  left: 25%;
+  animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(10) {
+  top: 20%;
+  left: 80%;
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(0) translateY(-90px) rotate(360deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.3) translateY(-90px) rotate(-180deg);
+    border-radius: 50%;
+    opacity: 0;
+  }
+}
+
   </style>
 
+    <script>
+    // The value below is injected by flutter build, do not touch.
+    var serviceWorkerVersion = '1625195294';
+  </script>
+    <!-- This script adds the flutter initialization JS code -->
+    <script src="flutter.js" defer></script>
 
   </head>
+
 <body>
 
-<div class="ring">Loading
-  <span></span>
+
+<div class="wrapper">
+  <div class="box">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
 </div>
 
-<script src="main.dart.js?version=11" type="application/javascript"></script>
-<!-- This script installs service_worker.js to provide PWA functionality to
-     application. For more information, see:
-     https://developers.google.com/web/fundamentals/primers/service-workers -->
+
 <script>
-    var serviceWorkerVersion = '2216356195';
-    var scriptLoaded = false;
-    function loadMainDartJs() {
-      if (scriptLoaded) {
-        return;
-      }
-      scriptLoaded = true;
-      var scriptTag = document.createElement('script');
-      scriptTag.src = 'main.dart.js?version=11';
-      scriptTag.type = 'application/javascript';
-      document.body.append(scriptTag);
-    }
-
-    if ('serviceWorker' in navigator) {
-      // Service workers are supported. Use them.
-      window.addEventListener('load', function () {
-        // Wait for registration to finish before dropping the <script> tag.
-        // Otherwise, the browser will load the script multiple times,
-        // potentially different versions.
-        var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
-        navigator.serviceWorker.register(serviceWorkerUrl)
-          .then((reg) => {
-            function waitForActivation(serviceWorker) {
-              serviceWorker.addEventListener('statechange', () => {
-                if (serviceWorker.state == 'activated') {
-                  console.log('Installed new service worker.');
-                  loadMainDartJs();
-                }
-              });
-            }
-            if (!reg.active && (reg.installing || reg.waiting)) {
-              // No active web worker and we have installed or are installing
-              // one for the first time. Simply wait for it to activate.
-              waitForActivation(reg.installing || reg.waiting);
-            } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
-              // When the app updates the serviceWorkerVersion changes, so we
-              // need to ask the service worker to update.
-              console.log('New service worker available.');
-              reg.update();
-              waitForActivation(reg.installing);
-            } else {
-              // Existing service worker is still good.
-              console.log('Loading app from service worker.');
-              loadMainDartJs();
-            }
-          });
-
-        // If service worker doesn't succeed in a reasonable amount of time,
-        // fallback to plaint <script> tag.
-        setTimeout(() => {
-          if (!scriptLoaded) {
-            console.warn(
-              'Failed to load app from service worker. Falling back to plain <script> tag.',
-            );
-            loadMainDartJs();
-          }
-        }, 4000);
+    window.addEventListener('load', function(ev) {
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        }
+      }).then(function(engineInitializer) {
+        return engineInitializer.initializeEngine();
+      }).then(function(appRunner) {
+        return appRunner.runApp();
       });
-    } else {
-      // Service workers not supported. Just drop the <script> tag.
-      loadMainDartJs();
-    }
+    });
   </script>
 </body>
 </html>

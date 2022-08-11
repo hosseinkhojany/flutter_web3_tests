@@ -47,8 +47,8 @@ const RESOURCES = {
 "main.dart.js": "375cfd06c91040633e2f9628eeb9cc69",
 "main.dart.js_2.part.js": "87ee6cfe1b0892e1c7076a2fb351d018",
 "main.dart.js_19.part.js": "c6fc40358c37a640f39d90500ee6e1f4",
-"index.html": "e3b08628bfc9b8e660625d343967be3b",
-"/": "e3b08628bfc9b8e660625d343967be3b",
+"index.html": "38118501306319d32b58107c0dc250b1",
+"/": "38118501306319d32b58107c0dc250b1",
 "main.dart.js_11.part.js": "6f91548ea2cb0a5c07ee6b273af3fa16",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
@@ -65,7 +65,6 @@ const RESOURCES = {
 "version.json": "3e4cfaa36e7a94a5bb8cdc138d27a645",
 "main.dart.js_8.part.js": "abefeabb1422c6619234bac1fa965eec",
 "main.dart.js_9.part.js": "a2d3d8936c28b20a7ef0f226c93ccf16",
-"a.zip": "04c46018dd7264c64d7c4a0caced9f69",
 "main.dart.js_4.part.js": "ddd83fb7618b1429efc91c9860b208f5"
 };
 
