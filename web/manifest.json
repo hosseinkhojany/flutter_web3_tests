@@ -1,6 +1,6 @@
 {
-    "name": "nft_cross_platform_ui",
-    "short_name": "nft_cross_platform_ui",
+    "name": "client1",
+    "short_name": "client1",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
