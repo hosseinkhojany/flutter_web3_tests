@@ -1,15 +1,1 @@
-{
-  "name": "vendor_name/flutter_web3_tests",
-  "description": "description",
-  "minimum-stability": "stable",
-  "license": "proprietary",
-  "authors": [
-    {
-      "name": "khoujani",
-      "email": "email@example.com"
-    }
-  ],
-  "require": {
-    
-  }
-}
+{}
