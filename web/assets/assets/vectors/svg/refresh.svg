@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="19.474" height="20.306" viewBox="0 0 19.474 20.306">
+  <g id="Group_420" data-name="Group 420" transform="translate(0.168 0.168)">
+    <path id="Path_784" data-name="Path 784" d="M.851,10.817a.824.824,0,0,0,.813-.832c0-3.089.741-5.1,1.93-6.337S6.654,1.664,9.569,1.664s4.8.757,5.975,1.984a6.212,6.212,0,0,1,1.378,2.376.9.9,0,0,0,.844.633.791.791,0,0,0,.781-1.015Q16.762,0,9.569,0,0,0,0,9.985c0,.012,0,.024,0,.037a.8.8,0,0,0,.813.8Zm1.365,3.129a.9.9,0,0,0-.844-.633A.791.791,0,0,0,.59,14.329Q2.376,19.97,9.569,19.97q9.569,0,9.569-9.985V9.948a.8.8,0,0,0-.813-.8h-.038a.824.824,0,0,0-.813.832c0,3.089-.741,5.1-1.93,6.337s-3.06,1.984-5.975,1.984-4.8-.757-5.975-1.984A6.212,6.212,0,0,1,2.216,13.946Z" fill="#1e2022" fill-rule="evenodd"/>
+    <path id="Path_785" data-name="Path 785" d="M20.993,1V5.993H16" transform="translate(-2.687 -0.168)" fill="none" stroke="#1e2022" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Path_786" data-name="Path 786" d="M1,21.993V17H5.993" transform="translate(-0.168 -2.855)" fill="none" stroke="#1e2022" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>
